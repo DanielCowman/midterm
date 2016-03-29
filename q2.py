@@ -24,7 +24,7 @@ def playGame():
 
 def askUserChoice():
     userInput = input("\t Number: ")
-    while userInput > 4 or userInput < 1:
+    while int(userInput) > 4 or int(userInput) < 1:
         print("Please enter a number between 1 and 4:")
         userInput = input("\t Number: ")
     return int(userInput)
@@ -40,7 +40,7 @@ def subtractSticks( number ):
     global sticks
     sticks = sticks - number
 
-    if sticks <= 1:
+    if sticks < 1:
         return True
     else:
         return False
